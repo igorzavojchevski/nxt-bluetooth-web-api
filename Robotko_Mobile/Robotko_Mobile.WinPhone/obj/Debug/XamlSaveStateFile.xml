@@ -1,0 +1,10 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="e:\dev studios workspaces\visualstudioprojects\robotko_mobile\robotko_mobile\robotko_mobile.winphone\obj\debug\intermediatexaml\robotko_mobile.winphone.exe" HashGuid="f4f0d036-ed3b-536e-c8ab-897c7b4a028e" />
+    <ReferenceAssembly PathName="e:\dev studios workspaces\visualstudioprojects\robotko_mobile\packages\microsoft.aspnet.signalr.client.2.2.0\lib\portable-win81+wpa81\microsoft.aspnet.signalr.client.dll" HashGuid="122fd8fc-0022-0dd0-2020-cd60e5b50849" />
+    <ReferenceAssembly PathName="e:\dev studios workspaces\visualstudioprojects\robotko_mobile\packages\microsoft.aspnet.signalr.client.2.2.0\lib\portable-win81+wpa81\microsoft.aspnet.signalr.client.store.dll" HashGuid="db15ee65-549a-89a1-7a28-15a9e99ac2e1" />
+    <ReferenceAssembly PathName="e:\dev studios workspaces\visualstudioprojects\robotko_mobile\packages\newtonsoft.json.8.0.2\lib\portable-net45+wp80+win8+wpa81+dnxcore50\newtonsoft.json.dll" HashGuid="38db4215-06d8-4b50-81fc-8e6b502244af" />
+    <ReferenceAssembly PathName="e:\dev studios workspaces\visualstudioprojects\robotko_mobile\packages\microsoft.net.http.2.2.29\lib\wpa81\system.net.http.extensions.dll" HashGuid="794366f8-cc6d-f0fa-3d07-33b45136e193" />
+    <ReferenceAssembly PathName="e:\dev studios workspaces\visualstudioprojects\robotko_mobile\packages\microsoft.net.http.2.2.29\lib\wpa81\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

@@ -1,0 +1,123 @@
+﻿<local:ResponsivePage
+    x:Class="Robotko_Mobile.WinPhone.Views.Robot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Robotko_Mobile.WinPhone.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FFE3E3E3">
+        <!-- All Visual state groups should be definied even if they are not utilised -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup
+              x:Name="Layouts">
+                <VisualState
+                      x:Name="FullScreen"/>
+                <VisualState
+                      x:Name="Large"/>
+                <VisualState
+                      x:Name="Medium"/>
+                <VisualState
+                      x:Name="Small"/>
+                <VisualState
+                      x:Name="ExtraSmall">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames
+                                  Storyboard.TargetProperty="(UIElement.Visibility)"
+                                  Storyboard.TargetName="abbAttach">
+                            <DiscreteObjectKeyFrame ObjectKeyFrame.KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1.25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition Width="0.8*"/>
+            <ColumnDefinition Width="0.03*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel
+              x:Name="blankPanel"
+              Grid.Column="1"
+              Grid.Row="0">
+        </StackPanel>
+
+        <StackPanel
+              x:Name="stackPanel"
+              Grid.Column="1"
+              Grid.Row="1">
+            <TextBlock x:Name="appTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Роботко" VerticalAlignment="Top" FontSize="50" Foreground="#CF874C"/>
+        </StackPanel>
+
+        <StackPanel
+            x:Name="robotInfo"
+            Grid.Column="1"
+            Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="robotNameLbl" Text="Име на робот:" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#FF00C0BA"/>
+                <TextBlock x:Name="robotName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#CF874C"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="robotSStrengthLbl" Text="Сигнал:" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#FF00C0BA"/>
+                <TextBlock x:Name="robotSStrength" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#CF874C"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="robotBatteryLevelLbl" Text="Батерија:" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#FF00C0BA"/>
+                <TextBlock x:Name="robotBatteryLevel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#CF874C"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel
+            x:Name="videoOutput"
+            Grid.Column="1"
+            Grid.Row="3">
+            
+        </StackPanel>
+
+        <StackPanel
+            x:Name="sensorValues"
+            Grid.Column="1"
+            Grid.Row="4">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="touchLbl" Text="Сензор за допир:" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#FF00C0BA"/>
+                <TextBlock x:Name="touchVal" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#CF874C"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="soundLbl" Text="Сензор за звук:" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#FF00C0BA"/>
+                <TextBlock x:Name="soundVal" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#CF874C"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="lightLbl" Text="Сензор за осветленост:" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#FF00C0BA"/>
+                <TextBlock x:Name="lightVal" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="#CF874C"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel
+              x:Name="robotControls"
+              Grid.Column="1"
+              Grid.Row="5"
+              HorizontalAlignment="Center">
+            <Button Content="Напред" x:Name="goForwardBtn" HorizontalAlignment="Center" Click="goForwardBtn_Click" ClickMode="Press"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Лево" x:Name="goLeftBtn" Click="goLeftBtn_Click" ClickMode="Press" />
+                <Button Content="Десно" x:Name="goRightBtn" Click="goRightBtn_Click" ClickMode="Press"/>
+            </StackPanel>
+            <Button Content="Назад" x:Name="goBackBtn" HorizontalAlignment="Center" Click="goBackBtn_Click" ClickMode="Press" />
+        </StackPanel>
+    </Grid>
+</local:ResponsivePage>
